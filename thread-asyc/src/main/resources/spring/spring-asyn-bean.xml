@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+      http://www.springframework.org/schema/context
+      http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:component-scan base-package="com.thread.asyn.*" />
+	
+	<bean id="threadService" class="com.thread.asyc.spring.AsynServiceFactoryBean">
+		<!--设置自定义相关参数-->
+		<property name="maxCacheWork" value="300"></property>
+		<property name="addWorkWaitTime" value="200000000"></property>
+		<!--添加相关处理器-->
+		<property name="errorAsynWorkHandler">
+			<bean class="com.thread.asyc.core.handler.DefaultErrorAsynWorkHandler"/>
+		</property>
+	</bean>
+
+
+</beans>
