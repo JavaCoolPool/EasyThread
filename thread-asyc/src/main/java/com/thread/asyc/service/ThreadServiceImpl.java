@@ -53,28 +53,28 @@ public class ThreadServiceImpl extends AsynApplicationContext implements ThreadS
 	}
 
 	@Override
-	public void addWork(Object tagerObject, String method) {
-		addWork(tagerObject, method, null);
+	public void addThread(Object tagerObject, String method) {
+		addThread(tagerObject, method, null);
 	}
 
 	@Override
-	public void addWork(Object tagerObject, String method, Object[] params) {
-		addWork(tagerObject, method, params, null);
+	public void addThread(Object tagerObject, String method, Object[] params) {
+		addThread(tagerObject, method, params, null);
 	}
 
 	@Override
-	public void addWork(Object tagerObject, String method, Object[] params, AsynCallBack asynCallBack) {
-		addWork(tagerObject, method, params, asynCallBack, DEFAULT_WORK_WEIGHT);
+	public void addThread(Object tagerObject, String method, Object[] params, AsynCallBack asynCallBack) {
+		addThread(tagerObject, method, params, asynCallBack, DEFAULT_WORK_WEIGHT);
 	}
 
 	@Override
-	public void addWork(Object tagerObject, String method, Object[] params, AsynCallBack asynCallBack,
+	public void addThread(Object tagerObject, String method, Object[] params, AsynCallBack asynCallBack,
 			WorkWeight weight) {
-		addWork(tagerObject, method, params, asynCallBack, DEFAULT_WORK_WEIGHT, false);
+		addThread(tagerObject, method, params, asynCallBack, DEFAULT_WORK_WEIGHT, false);
 	}
 
 	@Override
-	public void addWork(Object tagerObject, String method, Object[] params, AsynCallBack asynCallBack,
+	public void addThread(Object tagerObject, String method, Object[] params, AsynCallBack asynCallBack,
 			WorkWeight weight, boolean cache) {
 
 		if (tagerObject == null || method == null) {

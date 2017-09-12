@@ -22,15 +22,15 @@ public interface ThreadService {
 	public final static int SERVICE_CLOSE = 1;
 	
 	
-	public void addWork(Object tagerObject, String method);
+	public void addThread(Object tagerObject, String method);
 	
-	public void addWork(Object tagerObject, String method, Object[] params);
+	public void addThread(Object tagerObject, String method, Object[] params);
 	
-	public void addWork(Object tagerObject, String method, Object[] params, AsynCallBack asynCallBack);
+	public void addThread(Object tagerObject, String method, Object[] params, AsynCallBack asynCallBack);
 	
-	public void addWork(Object tagerObject, String method, Object[] params, AsynCallBack asynCallBack, WorkWeight weight);
+	public void addThread(Object tagerObject, String method, Object[] params, AsynCallBack asynCallBack, WorkWeight weight);
 	
-	public void addWork(Object tagerObject, String method, Object[] params, AsynCallBack asynCallBack, WorkWeight weight,
+	public void addThread(Object tagerObject, String method, Object[] params, AsynCallBack asynCallBack, WorkWeight weight,
               boolean cache);
 	
 	
