@@ -4,14 +4,14 @@
 
 # DEMO:payService接口中有一个payment(Pay pay)支付接口，此接口因为调用银行网关容易等待超时,假如有1000笔交易，这个时候用线程池效率高很多。
 
-@Autowired
+@Autowired                               
 private  threadService threadService
 
-@Autowired
+@Autowired                                            
 private  PayService payService
 
-Pay pay=new Pay();
-pay.setBankCard("1029301")
+Pay pay=new Pay();            
+pay.setBankCard("1029301")      
 
-
+//业务处理量很大的时候  此处可以加入for循环                       
 threadService.addThread(payService, "payment", new Object[]{pay} )
