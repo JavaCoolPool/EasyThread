@@ -13,5 +13,6 @@ private  PayService payService
 Pay pay=new Pay();            
 pay.setBankCard("1029301")      
 
-//业务处理量很大的时候  此处可以加入for循环                                                                         
-threadService.addThread(payService, "payment", new Object[]{pay} )
+//业务处理量很大的时候  此处可以加入for循环//
+
+ threadService.addThread(payService, "payment", new Object[]{pay} )
